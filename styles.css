@@ -1,0 +1,173 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Título principal */
+h1 {
+    color: #2980b9;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Estilo para los problemas */
+.problem {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.problem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de cada problema */
+.problem h3 {
+    color: #34495e;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input[type="number"], input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #2980b9;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Botones */
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #2980b9;
+    transform: scale(1);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f6f9;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mostrar los resultados en líneas separadas */
+.resultado p {
+    margin: 10px 0;
+}
+
+/* Estilos para elementos con énfasis */
+.resultado strong {
+    color: #2980b9;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .problem h3 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .resultado {
+        font-size: 1rem;
+    }
+}
+
+/* Agregar una animación para que los inputs y botones tengan un pequeño efecto de aparición */
+input[type="number"], input[type="text"], button {
+    opacity: 0;
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input[type="number"]:nth-child(odd), input[type="text"]:nth-child(odd), button:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+input[type="number"]:nth-child(even), input[type="text"]:nth-child(even), button:nth-child(even) {
+    animation-delay: 0.4s;
+}
